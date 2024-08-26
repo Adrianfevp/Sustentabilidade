@@ -250,36 +250,31 @@ footer {
   place-items: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 911px) {
   .header {
-    padding: 0.5em;
-    flex-direction: column; /* Alinha o título e o ícone do menu em coluna */
-    align-items: flex-start; /* Alinha os itens à esquerda */
+    flex-direction: line;
+    align-items: flex-start;
   }
 
   .header h1 {
-    font-size: 28px; /* Reduz o tamanho da fonte para caber melhor em telas pequenas */
-    margin-left: 0; /* Remove a margem esquerda para alinhamento adequado */
-    text-align: center; /* Centraliza o título em relação ao cabeçalho */
+    text-align: center;
   }
-
   .header .menu-icon {
-    opacity: 1; /* Garante que o ícone do menu seja visível */
-    margin: 10px 0; /* Ajusta a margem para criar espaço ao redor do ícone */
+    right: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .sidebar {
     position: fixed;
-    top: 50px; /* Ajusta a posição da barra lateral para se adequar ao cabeçalho */
-    width: 100%; /* Faz a barra lateral ocupar toda a largura da tela */
+    width: 100%;
     left: 0;
-    box-shadow: none; /* Remove a sombra para uma aparência mais limpa */
+    box-shadow: none;
   }
 
   .sidebar ul {
-    columns: 1; /* Exibe os itens da barra lateral em uma única coluna em celulares */
     padding: 0;
-    margin-top: 20px; /* Adiciona margem superior para separar do cabeçalho */
+    margin-top: 20px;
   }
 
   .sidebar li {
@@ -287,7 +282,7 @@ footer {
   }
 
   .sidebar li a {
-    font-size: 120%; /* Ajusta o tamanho da fonte para se adequar a telas menores */
+    font-size: 120%;
   }
 
   main {
@@ -296,34 +291,60 @@ footer {
 
   section {
     padding: 1em;
-    margin-bottom: 1em; /* Ajusta a margem inferior para melhorar o espaçamento */
-    width: 100%; /* Faz as seções ocuparem toda a largura disponível */
+    margin-bottom: 1em;
+    width: 100%;
   }
 
   #importância {
+    margin-top: 7em;
     padding: 1em;
-    text-align: center; /* Centraliza o texto */
+    text-align: center;
   }
 
   footer {
     padding: 0.5em;
-    font-size: 0.9em; /* Ajusta o tamanho da fonte para se adequar ao layout compacto */
+    font-size: 0.9em;
   }
 
   input,
   textarea {
-    font-size: 14px; /* Ajusta o tamanho da fonte para uma melhor legibilidade em telas pequenas */
+    font-size: 14px;
     width: 100%;
     margin-bottom: 1rem;
     padding: 0.5rem;
   }
 
   textarea {
-    height: 4rem; /* Ajusta a altura do textarea para não ocupar muito espaço */
+    height: 3rem;
+  }
+}
+#contribuicao ul{
+  padding-left: 10px;
+}
+@media only screen and (min-device-pixel-ratio: 2),
+       (-webkit-min-device-pixel-ratio: 2),
+       (min--moz-device-pixel-ratio: 2),
+       (-o-min-device-pixel-ratio: 2/1),
+       (min-resolution: 192dpi) {
+  .header h1 {
+    font-size: 30px; /* Aumenta um pouco para compensar a alta densidade */
+  }
+
+  .sidebar li a {
+    font-size: 130%; /* Ajusta o tamanho da fonte para melhor legibilidade */
+  }
+
+  input,
+  textarea {
+    font-size: 15px; /* Ajusta o tamanho da fonte para maior clareza */
+  }
+
+  .responsive-image {
+    background-image: url('path/to/high-res-image.jpg'); /* Usa imagem de alta resolução */
   }
 }
 
-@media only screen and (min-width: 767px) and (max-width: 1024px) {
+@media only screen and (min-width: 912px) and (max-width: 1024px) {
   .header {
     padding: 0.75em;
   }
@@ -337,11 +358,12 @@ footer {
   }
 
   .sidebar {
-    top: 80px; /* Ajusta a posição da barra lateral para se adequar ao cabeçalho em tablets */
+    top: 0; /* Ajusta a posição da barra lateral para se adequar ao cabeçalho em tablets */
   }
 
   .sidebar ul {
-    columns: 3; /* Ajusta a quantidade de colunas em tablets */
+    margin: 0;
+    columns: 4;
   }
 
   main {
@@ -354,7 +376,7 @@ footer {
   }
 
   #importância {
-    background-image: none;
+    margin-top: 7em;
     padding: 1.5em;
   }
 
