@@ -60,6 +60,7 @@ body {
 .header.scrolled h1 {
   font-size: 32px;
 }
+
 .header .menu-icon .line {
   width: 35px;
   height: 4px;
@@ -249,7 +250,7 @@ footer {
   place-items: center;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 700px) {
   .header {
     padding: 0.5em;
     flex-direction: column; /* Alinha o título e o ícone do menu em coluna */
@@ -370,4 +371,4 @@ footer {
   textarea {
     height: 4rem;
   }
-}  
+}
