@@ -149,7 +149,7 @@ section {
   border-radius: 2em;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
   align-items: center;
-  width: 90%;
+  width: 100%;
 }
 
 h1, h2 {
@@ -249,8 +249,86 @@ footer {
   display: grid;
   place-items: center;
 }
+@media only screen and (max-width: 563px) {
+  .header {
+    flex-direction: line;
+    align-items: flex-start;
+  }
 
-@media only screen and (max-width: 911px) {
+  .header h1 {
+    text-align: center;
+  }
+  .header .menu-icon {
+    right: 0.5%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .header.scrolled h1 {
+    font-size: 20px;
+  }
+  
+  .sidebar {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    box-shadow: none;
+    top: -19px;
+  }
+  .sidebar ul {
+    font-size: 60%;
+  }
+
+  .sidebar li {
+    padding: 10px;
+  }
+
+  main {
+    padding: 1em;
+  }
+
+  section {
+    padding: 0.8em;
+    margin: auto;
+    margin-bottom: 1em;
+    width: 110%;
+  }
+
+  #importância {
+    margin-top: 5em;
+    padding: 0.8em;
+    text-align: center;
+  }
+  #importância h1{font-size:95%;}
+  #importância p{font-size:80%;margin: 2%;}
+  #importância a{padding: 1% 2%;font-size: 90%;}
+  
+  footer {
+    width: 110%;
+    padding: 0.5em;
+    font-size: 0.9em;
+  }
+
+  #pilares{
+    background-image: url(Sustentabilidade_pilares.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  #pilares p{margin-bottom: 410px;}
+  .sus{width: 0;opacity: 0;}
+  input,
+  textarea {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+  }
+
+  textarea {
+    height: 3rem;
+  }
+}
+@media only screen and (min-width: 564px) and (max-width: 911) {
   .header {
     flex-direction: line;
     align-items: flex-start;
