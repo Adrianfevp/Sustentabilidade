@@ -250,7 +250,7 @@ footer {
   place-items: center;
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 767px) {
   .header {
     padding: 0.5em;
     flex-direction: column; /* Alinha o título e o ícone do menu em coluna */
@@ -301,7 +301,6 @@ footer {
   }
 
   #importância {
-    background-image: none; /* Remove a imagem de fundo para simplificar o layout */
     padding: 1em;
     text-align: center; /* Centraliza o texto */
   }
