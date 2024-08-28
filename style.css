@@ -119,11 +119,6 @@ body {
   padding: 0;
   margin-top: 80px;
 }
-
-.sidebar li {
-  padding: 10px 20px;
-}
-
 .sidebar li:last-child {
   border-bottom: none;
 }
