@@ -274,9 +274,8 @@ footer {
   }
   .sidebar li {
      text-align: center;
-    columns: 4;
+    lines: 1;
   }
-  .sidebar .cc{font-size:40%}
   main {
     padding: 1em;
   }
