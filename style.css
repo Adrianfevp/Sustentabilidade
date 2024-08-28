@@ -253,8 +253,7 @@ footer {
   .header {
     flex-direction: line;
     align-items: flex-start;
-  }
-*{background-color: pink ; }
+  }
   .header h1 {
     text-align: center;
   }
