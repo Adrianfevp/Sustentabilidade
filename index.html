@@ -87,43 +87,37 @@
   <script>
  function adjustSidebar() {
   const sidebar = document.getElementById('sidebar');
-  const ul = sidebar.querySelector('sidebar ul');
-  const header = document.querySelector('.header');
-  if (header.classList.contains('scrolled')) {
-    sidebar.style.height = '89px';
-  } else {
-    sidebar.style.height = '120px';
-  }
-}function adjustSidebar() {
-  const sidebar = document.getElementById('sidebar');
   const ul = sidebar.querySelector('ul');
   if (window.scrollY > 200)  {
     ul.style.marginTop = '50px';
+    sidebar.style.height = '89px';
   } else {
     ul.style.marginTop = '80px';
+    sidebar.style.height = '120px';
   }
 }
-    function toggleSidebar() {
-        const sidebar = document.getElementById('sidebar');
-        const menuIcon = document.querySelector('.menu-icon');
-        sidebar.classList.toggle('desactive');
-        menuIcon.classList.toggle('desactive');
-      } 
 
-      let header = document.querySelector('.header');
-      window.addEventListener('scroll', () => {
-      if (window.scrollY > 200) {
-        header.classList.add('scrolled');
-        document.getElementById('sidebar').classList.add('desactive');
-        document.querySelector('.menu-icon').classList.add('desactive');
-        adjustSidebar();
-      } else {
-        header.classList.remove('scrolled');
-        document.getElementById('sidebar').classList.remove('desactive');
-        document.querySelector('.menu-icon').classList.remove('desactive');
-        adjustSidebar(); 
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const menuIcon = document.querySelector('.menu-icon');
+  sidebar.classList.toggle('desactive');
+  menuIcon.classList.toggle('desactive');
+}
+
+let header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 200) {
+    header.classList.add('scrolled');
+    document.getElementById('sidebar').classList.add('desactive');
+    document.querySelector('.menu-icon').classList.add('desactive');
+  } else {
+    header.classList.remove('scrolled');
+    document.getElementById('sidebar').classList.remove('desactive');
+    document.querySelector('.menu-icon').classList.remove('desactive');
   }
+  adjustSidebar(); 
 });
+
   </script>
 </body>
 </html>
