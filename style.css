@@ -278,7 +278,7 @@ footer {
     font-size: 60%;
   }
   .sidebar.scrolled{
-    font-size:10%;
+    top:30px;
   }
 
   .sidebar li {
