@@ -254,7 +254,7 @@ footer {
     flex-direction: line;
     align-items: flex-start;
   }
-*{background-color: yellow; }
+*{background-color: red; }
   .header h1 {
     text-align: center;
   }
@@ -272,12 +272,12 @@ footer {
     width: 100%;
     left: 0;
     box-shadow: none;
-    top: -20px;
+    top: -19px;
   }
+.sidebar .scrolled { -10}
   .sidebar ul {
     font-size: 60%;
-  }
-  .sidebar .scrolled li{top: -10px;}
+  }
   .sidebar li {
     padding: 10px;
   }
