@@ -270,6 +270,7 @@ footer {
   }
   
   .sidebar ul {
+    line: 1;
     font-size: 60%;
   }
   .sidebar li {
