@@ -273,9 +273,10 @@ footer {
     font-size: 60%;
   }
   .sidebar li {
-    text-aling:center;
-    columns:4;
+     text-align: center;
+    columns: 4;
   }
+  .sidebar .cc{font-size:40%}
   main {
     padding: 1em;
   }
