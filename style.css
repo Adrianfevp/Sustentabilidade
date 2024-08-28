@@ -274,6 +274,7 @@ footer {
   }
   .sidebar li {
     text-aling:center;
+    columns:4;
   }
   main {
     padding: 1em;
