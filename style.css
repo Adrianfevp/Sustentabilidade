@@ -253,7 +253,8 @@ footer {
   .header {
     flex-direction: line;
     align-items: flex-start;
-  }
+  }
+*{background-color: BLUE ;}
   .header h1 {
     text-align: center;
   }
@@ -267,11 +268,11 @@ footer {
   }
   
   .sidebar {
-    position: fixed;
+    position: relative;
     width: 100%;
     left: 0;
     box-shadow: none;
-    top: -19px;
+    top: -20px;
   }
 .sidebar .scrolled { -10}
   .sidebar ul {
