@@ -254,7 +254,7 @@ footer {
     flex-direction: line;
     align-items: flex-start;
   }
-*{background-color: red; }
+*{background-color: yellow; }
   .header h1 {
     text-align: center;
   }
