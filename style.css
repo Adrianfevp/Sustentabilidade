@@ -254,7 +254,7 @@ footer {
     flex-direction: line;
     align-items: flex-start;
   }
-*{background-color:yellow; }
+*{background-color:red; }
   .header h1 {
     text-align: center;
   }
@@ -280,7 +280,7 @@ footer {
     
   .sidebar li {
     padding: 5px;
-    padding-top: 15px;
+    padding-top: 10px;
   }
 
   main {
