@@ -250,7 +250,6 @@ footer {
   place-items: center;
 }
 @media only screen and (max-width: 563px) {
-  body{margin:10px;
   .header {
     flex-direction: line;
     align-items: flex-start;
@@ -278,11 +277,6 @@ footer {
   .sidebar ul {
     font-size: 60%;
   }
-
-  .sidebar li {
-    padding: 20px;
-  }
-
   main {
     padding: 1em;
   }
