@@ -268,7 +268,7 @@ footer {
   
   .sidebar {
     position: relative;
-    width: 110%;
+    width: 100%;
     left: 0;
     box-shadow: none;
     top: -20px;
@@ -294,7 +294,7 @@ footer {
   }
 
   #importância {
-    margin-top: 5em;
+    margin-top: 3em;
     padding: 0.8em;
     text-align: center;
   }
