@@ -272,10 +272,10 @@ footer {
     width: 100%;
     left: 0;
     box-shadow: none;
-    top: -18px;
+    top: -20px;
   }
   .sidebar ul {
-    font-size: 60%;
+    font-size: 55%;
   }
 
   .sidebar li {
