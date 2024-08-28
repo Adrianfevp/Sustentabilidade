@@ -37,7 +37,7 @@ body {
   width: 100%;
   z-index: 1;
   transition: all 0.3s ease;
-  height: 80px; /* Ajuste conforme a altura desejada */
+  height: 50; /* Ajuste conforme a altura desejada */
 }
 
 .header h1 {
@@ -260,7 +260,6 @@ footer {
 /* Estilos responsivos */
 @media only screen and (max-width: 563px) {
   .header {
-    flex-direction: column;
     align-items: center;
   }
 
