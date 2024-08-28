@@ -50,6 +50,7 @@ body {
 }
 
 .header .menu-icon {
+  margin: 0% 50%;
   margin-left: auto;
   cursor: pointer;
   margin-right: 20px;
