@@ -277,12 +277,10 @@ footer {
   .sidebar ul {
     font-size: 60%;
   }
-  .sidebar.scrolled{
-    top:30px;
-  }
-
+    
   .sidebar li {
-    padding: 10px;
+    padding: 5px;
+    padding-top: 5px;
   }
 
   main {
