@@ -254,6 +254,11 @@ footer {
     flex-direction: line;
     align-items: flex-start;
   }
+
+*{background-color: pink;}
+
+
+  
   .header h1 {
     text-align: center;
   }
@@ -273,7 +278,7 @@ footer {
     box-shadow: none;
     top: -20px;
   }
-.sidebar .scrolled { -10}
+  .sidebar.scrolled{top:0;}
   .sidebar ul {
     font-size: 60%;
   }
@@ -291,7 +296,7 @@ footer {
     padding: 0.8em;
     margin: auto;
     margin-bottom: 1em;
-    width: 110%;
+    width: 101%;
   }
 
   #importância {
