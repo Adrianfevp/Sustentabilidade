@@ -1,78 +1,347 @@
-/* Estilos para telas pequenas */
+/* Reseta margens e preenchimentos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Animação de fade-in para o body */
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Estilo geral do body */
+body {
+  animation: fadeInAnimation cubic-bezier(.45, 1, .3, 1) 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0;
+}
+
+/* Estilo do cabeçalho */
+.header {
+  background-color: #e9e5e5;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  transition: all 0.3s ease;
+  height: 80px; /* Ajuste conforme a altura desejada */
+}
+
+/* Estilo do título no cabeçalho */
+.header h1 {
+  margin: 0;
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 20px;
+  color: #002004;
+  transition: font-size 0.3s ease-in-out;
+}
+
+/* Estilo do ícone de menu */
+.header .menu-icon {
+  margin-left: auto;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.header.scrolled {
+  padding: 10px;
+  font-size: 0.3em;
+  box-shadow: none;
+}
+
+.header.scrolled h1 {
+  font-size: 32px;
+}
+
+.header .menu-icon .line {
+  width: 35px;
+  height: 4px;
+  background-color: #689F38;
+  margin-bottom: 3px;
+  transition: transform 0.3s ease, opacity 0s ease;
+}
+
+.header .menu-icon.desactive .line:nth-child(3),
+.header .menu-icon.desactive .line:nth-child(1) {
+  transform: rotate(0deg) translate(0, 0);
+  transform-origin: center;
+}
+
+.header .menu-icon.desactive .line:nth-child(1) {
+  margin-bottom: 5px;
+}
+
+.header .menu-icon.desactive .line:nth-child(2) {
+  opacity: 1;
+}
+
+.header .menu-icon.desactive .line:nth-child(3) {
+  margin-top: 5px;
+}
+
+.header .menu-icon .line:nth-child(1) {
+  margin-bottom: -4px;
+  transform: rotate(45deg);
+}
+
+.header .menu-icon .line:nth-child(2) {
+  opacity: 0;
+  margin: 0px;
+}
+
+.header .menu-icon .line:nth-child(3) {
+  margin-top: -4px;
+  transform: rotate(-45deg);
+}
+
+/* Estilo da barra lateral */
+.sidebar {
+  position: fixed;
+  top: 80px; /* Ajuste para corresponder à altura do cabeçalho */
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s ease;
+  overflow-x: auto;
+  padding: 10px;
+}
+
+.sidebar.desactive {
+  top: -250px;
+}
+
+.sidebar ul {
+  margin-left: 10%; 
+  list-style: none;
+  columns: 4;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.sidebar li:last-child {
+  border-bottom: none;
+}
+
+.sidebar li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 150%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+section {
+  background-color: #f2f2f2;
+  padding: 2em;
+  margin-bottom: 2rem;
+  border-radius: 2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.55);
+  align-items: center;
+  width: 100%;
+}
+
+h1,
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #002004;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #689F38;
+}
+
+.mundo {
+  width: 100%;
+  height: 20em;
+  margin-bottom: 20px;
+}
+
+#importância {
+  margin-top: 80px;
+  background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Green_Earth%2C_yellow_flower.jpg/640px-Green_Earth%2C_yellow_flower.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  color: #ffffff;
+}
+
+#importância h1 {
+  color: #ffffff;
+  font-size: 200%;
+  margin-bottom: 19%;
+}
+
+#importância p {
+  margin: 0.1%;
+  font-size: 150%;
+}
+
+#importância a {
+  font-size: 18px;
+  margin-top: 25%;
+  border-radius: 2em;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #333;
+  text-decoration: none;
+}
+
+.sus {
+  height: 300px;
+}
+
+.t1 {
+  text-align: justify;
+  padding: 0 2rem 0 0;
+}
+
+.frase {
+  text-align: center;
+}
+
+input,
+textarea {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 0.8em;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+textarea {
+  height: 3rem;
+}
+
+footer {
+  background-color: #002004;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  clear: both;
+}
+
+.envio {
+  margin-top: 1rem;
+  display: grid;
+  place-items: center;
+}
+
+/* Estilos responsivos */
 @media only screen and (max-width: 563px) {
   .header {
-    flex-direction: row; /* Alinhar itens horizontalmente */
-    justify-content: space-between; /* Espaço entre itens */
-    align-items: center; /* Alinhar itens verticalmente ao centro */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header h1 {
-    text-align: left; /* Alinhar título à esquerda */
-    margin-left: 20px; /* Espaço à esquerda do título */
+    text-align: center;
+    margin-left: -2%;
   }
 
   .header .menu-icon {
-    margin-left: 20px; /* Espaço à esquerda do ícone do menu */
-    margin-right: 20px; /* Espaço à direita do ícone do menu */
+    right: 0.5%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .header.scrolled h1 {
-    font-size: 20px; /* Ajustar o tamanho da fonte quando rolar */
+    font-size: 20px;
   }
 
   .sidebar {
-    position: fixed; /* Fixar a barra lateral */
-    top: 80px; /* Ajuste conforme a altura do cabeçalho */
-    left: 0;
+    position: relative;
     width: 100%;
+    left: 0;
     box-shadow: none;
+    top: -20px;
   }
 
   .sidebar ul {
-    font-size: 60%; /* Ajustar o tamanho da fonte */
-    margin-left: 2%; /* Ajustar o espaço à esquerda */
+    font-size: 60%;
+    margin-left: 2%;
   }
 
   .sidebar li {
-    text-align: center; /* Centralizar o texto */
-    columns: 1; /* Ajustar o número de colunas */
+    text-align: center;
+    columns: 4;
+  }
+
+  .cc {
+    margin-left: 20px;
+  }
+
+  .cmt {
+    width: 180%;
   }
 
   main {
-    padding: 1em; /* Ajustar o preenchimento principal */
+    padding: 1em;
   }
 
   section {
-    padding: 0.8em; /* Ajustar o preenchimento da seção */
+    padding: 0.8em;
     margin: auto;
-    margin-bottom: 1em; /* Ajustar a margem inferior */
-    width: 100%; /* Ajustar a largura */
+    margin-bottom: 1em;
+    width: 100%;
   }
 
   #importância {
-    margin-top: -2em; /* Ajustar a margem superior */
-    padding: 0.8em; /* Ajustar o preenchimento */
-    text-align: center; /* Centralizar o texto */
+    margin-top: -2em;
+    padding: 0.8em;
+    text-align: center;
   }
 
   #importância h1 {
-    font-size: 95%; /* Ajustar o tamanho da fonte */
+    font-size: 95%;
   }
 
   #importância p {
-    font-size: 80%; /* Ajustar o tamanho da fonte */
-    margin: 2%; /* Ajustar a margem */
+    font-size: 80%;
+    margin: 2%;
   }
 
   #importância a {
-    padding: 1% 2%; /* Ajustar o preenchimento do link */
-    font-size: 90%; /* Ajustar o tamanho da fonte */
+    padding: 1% 2%;
+    font-size: 90%;
   }
 
   footer {
-    width: 100%; /* Ajustar a largura */
-    padding: 0.5em; /* Ajustar o preenchimento */
-    font-size: 0.9em; /* Ajustar o tamanho da fonte */
+    width: 100%;
+    padding: 0.5em;
+    font-size: 0.9em;
   }
 
   #pilares {
@@ -83,44 +352,45 @@
   }
 
   #pilares p {
-    margin-bottom: 362px; /* Ajustar a margem inferior */
+    margin-bottom: 362px;
   }
 
   .sus {
     width: 0;
-    opacity: 0; /* Ocultar a seção */
+    opacity: 0;
   }
 
   input,
   textarea {
-    font-size: 14px; /* Ajustar o tamanho da fonte */
-    width: 100%; /* Ajustar a largura */
-    margin-bottom: 1rem; /* Ajustar a margem inferior */
-    padding: 0.5rem; /* Ajustar o preenchimento */
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
   }
 
   textarea {
-    height: 3rem; /* Ajustar a altura */
+    height: 3rem;
   }
 }
 
 @media only screen and (min-width: 564px) and (max-width: 911px) {
   .header {
-    flex-direction: row; /* Alinhar itens horizontalmente */
-    justify-content: space-between; /* Espaço entre itens */
-    align-items: center; /* Alinhar itens verticalmente ao centro */
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   .header h1 {
-    text-align: center; /* Centralizar o título */
+    text-align: center;
   }
 
   .header .menu-icon {
-    margin-right: 20px; /* Espaço à direita do ícone do menu */
+    right: 1%;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .sidebar {
-    position: fixed; /* Fixar a barra lateral */
+    position: fixed;
     width: 100%;
     left: 0;
     box-shadow: none;
@@ -128,47 +398,120 @@
 
   .sidebar ul {
     padding: 0;
-    margin-top: 20px; /* Ajustar a margem superior */
+    margin-top: 20px;
   }
 
   .sidebar li {
-    padding: 10px; /* Ajustar o preenchimento dos itens da lista */
+    padding: 10px;
   }
 
   .sidebar li a {
-    font-size: 120%; /* Ajustar o tamanho da fonte */
+    font-size: 120%;
   }
 
   main {
-    padding: 1em; /* Ajustar o preenchimento principal */
+    padding: 1em;
   }
 
   section {
-    padding: 1em; /* Ajustar o preenchimento da seção */
-    margin-bottom: 1em; /* Ajustar a margem inferior */
-    width: 100%; /* Ajustar a largura */
+    padding: 1em;
+    margin-bottom: 1em;
+    width: 100%;
   }
 
   #importância {
-    margin-top: 7em; /* Ajustar a margem superior */
-    padding: 1em; /* Ajustar o preenchimento */
-    text-align: center; /* Centralizar o texto */
+    margin-top: 7em;
+    padding: 1em;
+    text-align: center;
   }
 
   footer {
-    padding: 0.5em; /* Ajustar o preenchimento */
-    font-size: 0.9em; /* Ajustar o tamanho da fonte */
+    padding: 0.5em;
+    font-size: 0.9em;
   }
 
   input,
   textarea {
-    font-size: 14px; /* Ajustar o tamanho da fonte */
-    width: 100%; /* Ajustar a largura */
-    margin-bottom: 1rem; /* Ajustar a margem inferior */
-    padding: 0.5rem; /* Ajustar o preenchimento */
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
   }
 
   textarea {
-    height: 3rem; /* Ajustar a altura */
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-device-pixel-ratio: 2),
+(-webkit-min-device-pixel-ratio: 2),
+(min--moz-device-pixel-ratio: 2),
+(-o-min-device-pixel-ratio: 2/1),
+(min-resolution: 192dpi) {
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .sidebar li a {
+    font-size: 130%;
+  }
+
+  input,
+  textarea {
+    font-size: 15px;
+  }
+
+  .responsive-image {
+    background-image: url('path/to/high-res-image.jpg');
+  }
+}
+
+@media only screen and (min-width: 912px) and (max-width: 1024px) {
+  .header {
+    padding: 0.75em;
+  }
+
+  .header h1 {
+    font-size: 40px;
+  }
+
+  .header .menu-icon {
+    margin-right: 15px;
+  }
+
+  .sidebar {
+    top: 80px; /* Ajuste para corresponder à altura do cabeçalho em tablets */
+  }
+
+  .sidebar ul {
+    margin: 0;
+    columns: 4;
+  }
+
+  main {
+    padding: 1.5em;
+  }
+
+  section {
+    padding: 1.5em;
+    margin-bottom: 1.5rem;
+  }
+
+  #importância {
+    margin-top: 7em;
+    padding: 1.5em;
+  }
+
+  footer {
+    padding: 0.75em;
+  }
+
+  input,
+  textarea {
+    font-size: 1em;
+  }
+
+  textarea {
+    height: 4rem;
   }
 }
