@@ -107,21 +107,20 @@ body {
   transform: rotate(-45deg);
 }
 
-/* Estilo da barra lateral */
+.sidebar.desactive {
+  top: -250px;
+}
+
 .sidebar {
   position: fixed;
-  top: -11px; /* Ajuste para corresponder à altura do cabeçalho */
+  top: 80px; /* Ajuste para corresponder à altura do cabeçalho */
   left: 0;
   width: 100%;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transition: left 0.3s ease;
-  overflow-x: auto;
+  overflow-x: hidden; /* Alterado para hidden */
   padding: 10px;
-}
-
-.sidebar.desactive {
-  top: -250px;
 }
 
 .sidebar ul {
