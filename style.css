@@ -272,6 +272,9 @@ footer {
   .sidebar ul {
     font-size: 60%;
   }
+  .sidebar li {
+    padding:5px 0px 0px 5px;
+  }
   main {
     padding: 1em;
   }
