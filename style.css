@@ -109,7 +109,7 @@ body {
 /* Estilo da barra lateral */
 .sidebar {
   position: fixed;
-  top: 80px; /* Ajuste para corresponder à altura do cabeçalho */
+  top: -11px; /* Ajuste para corresponder à altura do cabeçalho */
   left: 0;
   width: 100%;
   background-color: #fff;
